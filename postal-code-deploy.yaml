@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postal-code-app
+  labels:
+    app: postal-code
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postal-code
+  template:
+    metadata:
+      labels:
+        app: postal-code
+    spec:
+      containers:
+        - name: postal-code-app
+          image: ssumura/postal-code:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
