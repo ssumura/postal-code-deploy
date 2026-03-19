@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: postal-code-app
-          image: ssumura/postal-code:v1
+          image: ssumura/postal-code@sha256:9a59e8606c57b3066170b6bfa63f91eba091430df4c2b820159df0a1ddfee94a
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
